@@ -15,21 +15,16 @@ jobs:
           submodules: recursive
           fetch-depth: 0
 
-      - name: Update submodules
-        run: |
-          git submodule update --init --recursive
-          git submodule status
-
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: '0.125.3'
+          hugo-version: 'latest'
           extended: true
 
-      - name: Verify theme files
+      - name: Update submodules
         run: |
-          ls -la themes/
-          ls -la themes/hugo-theme-next/ || echo "Theme directory not found"
+          git submodule update --init --recursive --force
+          ls -la themes/hugo-theme-next/
 
       - name: Build Hugo site
         run: hugo --minify
