@@ -1,6 +1,6 @@
 ---
-title: "A Short History of AI - How it began and why it exploded"
-date: 2024-08-31T12:00:00+05:30
+title: "AI History Timeline: From Turing to Transformers"
+date: 2025-08-30T12:00:00+05:30
 draft: false
 author: "Shashi"
 categories: ["AI"]
