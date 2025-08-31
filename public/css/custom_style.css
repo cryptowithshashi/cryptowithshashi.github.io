@@ -1,0 +1,4 @@
+/* Fix for missing SCSS variable */
+:root {
+  --color-overlay: rgba(0, 0, 0, 0.5);
+}

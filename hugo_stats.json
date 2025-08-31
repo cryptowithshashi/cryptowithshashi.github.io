@@ -1,0 +1,25 @@
+{
+  "htmlElements": {
+    "tags": [
+      "a",
+      "body",
+      "div",
+      "head",
+      "html",
+      "link",
+      "meta",
+      "script",
+      "style",
+      "title"
+    ],
+    "classes": [
+      "back_home_box",
+      "btn",
+      "btn-primary",
+      "btn_blue"
+    ],
+    "ids": [
+      "public_page"
+    ]
+  }
+}
