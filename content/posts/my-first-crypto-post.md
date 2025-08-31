@@ -121,12 +121,6 @@ Transformers became highly scalable with data and compute, which enabled the cre
 
 This architecture change enabled the massive scale-up that led to modern large language models like GPT, BERT, and eventually ChatGPT. The Transformer became the backbone of almost all modern natural language processing and many other domains too.
 
-{{< info "Important" >}}
-
-**Moore's Law:** Transistor density doubling roughly every 2 years since the 1960s gave us exponentially more computational power.
-
-Many AI breakthroughs weren't just algorithmic - they became practical because the hardware finally caught up.
-
 ## Questions I'm Still Exploring
 
 1. How much of current AI success is still sophisticated pattern matching vs. genuine reasoning?
