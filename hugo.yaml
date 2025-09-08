@@ -146,16 +146,36 @@ menus:
       pageRef: /about
       pre: user
       weight: 2
-    - identifier: donation
-      name: Donate
-      pageRef: /donate
-      pre: coins
+    - identifier: content
+      name: Content
+      pre: folder-open
       weight: 3
+    - identifier: articles
+      name: Articles
+      pageRef: /categories/articles
+      parent: content
+      weight: 31
+    - identifier: case-studies
+      name: Case Studies
+      pageRef: /categories/case-studies
+      parent: content
+      weight: 32
+    - identifier: projects
+      name: Projects
+      pageRef: /categories/projects
+      parent: content
+      weight: 33
     - identifier: archives
       name: Archives
       pageRef: /archives
       pre: archive
       weight: 4
+    - identifier: donation
+      name: Donate
+      pageRef: /donate
+      pre: coins
+      weight: 5
+
 
 #-----------------------------------------
 # Hugo NexT Theme Parameters
@@ -303,7 +323,7 @@ params:
     copyright:
 
     # Powered by Hugo & NexT
-    powered: true
+    powered: false
 
     # Beian ICP and gongan information (disabled for international site)
     beian:
@@ -311,7 +331,7 @@ params:
 
     # Vendors list who support website
     vendors:
-      enable: true
+      enable: false
       title: Support
       list:
         - name: GitHub
@@ -399,9 +419,9 @@ params:
       # solana: /imgs/bitcoin.png
     # Donations configuration (required by SCSS)
     donations:
-    enable: false
-    post: false
-    sidebar: false
+      enable: false
+      post: false
+      sidebar: false
 
 # Subscribe through various channels
   # followMe:
@@ -566,12 +586,23 @@ params:
   # Multiple Comment System Support
   comments:
     # If true, will show comment component in post end
-    enable: false
+    enable: true
     # Choose a comment system to be displayed by default
     # Available values: livere | waline | utterances | artalk | giscus
-    active: waline
+    active: utterances
     # Setting `true` means remembering the comment system selected by the visitor
-    storage: true
+    storage: true 
+    nav:
+      - name: utterances
+        title: "GitHub Comments"
+        weight: 1
+    
+  utterances:
+    enable: true
+    repo: cryptowithshashi/cryptowithshashi.github.io
+    issueTerm: pathname
+    theme: github-light
+    crossorigin: anonymous
 
   # ---------------------------------------------------------------
   # Post Widgets & Content Sharing Services
@@ -585,11 +616,16 @@ params:
 
   # Article sharing function
   share:
-    enable: false
+    enable: true
     # Simple online sharing without statistical data function
     addtoany:
       locale: en-US
-      num_services: 8
+      buttons:
+       - twitter
+       - linkedin
+       - telegram
+       - whatsapp
+      num_services: 4
 
   # ---------------------------------------------------------------
   # Statistics and Analytics

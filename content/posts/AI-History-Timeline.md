@@ -3,9 +3,9 @@ title: "AI History Timeline: From Turing to Transformers"
 date: 2025-08-30T12:00:00+05:30
 draft: false
 author: "Shashi"
-categories: ["AI"]
+categories: ["articles"]
 tags: ["AI","deep-learning"]
-description: "My notes on how AI started from Turing’s imitation game to symbolic AI, ELIZA, neural networks, ImageNet/AlexNet, GANs and Transformers and why compute & data changed everything."
+description: "My notes on how AI started from Turing's imitation game to symbolic AI, ELIZA, neural networks, ImageNet/AlexNet, GANs and Transformers and why compute & data changed everything."
 ---
 
 I read a bunch of old papers and remembered fragments of the story, Turing’s imitation game, McCarthy’s Dartmouth proposal, ELIZA’s keyword tricks — and wanted to collect a readable timeline so my future self can quickly recall how AI evolved. Below I put the history in plain words, added technical notes where it helps, and suggested why each era mattered to what we see today.
