@@ -1123,6 +1123,114 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 ;
+/* Addtoany share plugin */
+NexT.plugins.share.addtoany = function() {
+  const element = '.a2a_kit';
+  if (!NexT.CONFIG.share.enable || !NexT.utils.checkDOMExist(element)) return; 
+
+  const addtoany = NexT.CONFIG.share.addtoany;
+
+  if (!addtoany) return;
+
+  NexT.utils.lazyLoadComponent(element, function() {
+    let addtoany_cfg = `
+      var a2a_config = a2a_config || {};
+      a2a_config.onclick = 1;
+      a2a_config.locale = "${addtoany.locale}";
+      a2a_config.num_services = ${addtoany.num};
+    `;
+
+    NexT.utils.getScript(null, {
+      textContent: addtoany_cfg
+    });   
+    
+    NexT.utils.getScript(addtoany.js, () => { NexT.utils.hiddeLodingCmp(element); });
+  });
+}
+;
+/* Utterances comment plugin */
+NexT.plugins.comments.utterances = function() {
+  const element = '.utterances-container';
+  if (!NexT.CONFIG.utterances
+    || !NexT.utils.checkDOMExist(element)) return;
+
+  const {
+    repo,
+    issueterm,
+    label,
+    theme
+  } = NexT.CONFIG.utterances.cfg;
+
+  NexT.utils.lazyLoadComponent(element, function() {
+    NexT.utils.getScript(NexT.CONFIG.utterances.js, {
+      attributes: {
+        'async'       : true,
+        'crossorigin' : 'anonymous',
+        'repo'        : repo,
+        'issue-term'  : issueterm,
+        'label'       : label,
+        'theme'       : theme
+      },
+      parentNode: document.querySelector(element)
+    });
+
+    NexT.utils.hiddeLodingCmp(element);
+    
+    // Remove "powered by utterances" branding after widget loads
+    setTimeout(function() {
+      const container = document.querySelector(element);
+      if (container) {
+        // Add CSS to hide the branding immediately
+        const style = document.createElement('style');
+        style.innerHTML = `
+          /* Hide the utterances branding text */
+          .utterances-container .utterances {
+            position: relative;
+            overflow: hidden;
+          }
+          
+          /* Create overlay to hide bottom part with branding */
+          .utterances-container .utterances::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 25px;
+            background: #ffffff;
+            z-index: 999;
+            pointer-events: none;
+          }
+          
+          /* For dark themes */
+          [data-theme="dark"] .utterances-container .utterances::after,
+          .dark .utterances-container .utterances::after {
+            background: #0d1117;
+          }
+          
+          /* Additional targeting for the specific text */
+          .utterances[src*="utteranc.es"] {
+            margin-bottom: -25px !important;
+          }
+        `;
+        document.head.appendChild(style);
+        
+        // Also try to monitor iframe changes
+        const checkForIframe = setInterval(function() {
+          const iframe = container.querySelector('.utterances');
+          if (iframe) {
+            clearInterval(checkForIframe);
+            
+            // Apply additional styling to iframe
+            iframe.style.marginBottom = '-25px';
+            iframe.style.height = 'calc(100% - 25px)';
+          }
+        }, 100);
+      }
+    }, 500);
+  });
+}
+;
 /* LocalSearch engine */
 class LocalSearch {
   constructor({
