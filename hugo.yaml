@@ -77,6 +77,19 @@ markup:
       table: true
       taskList: true
       typographer: false
+      passthrough:
+        delimiters:
+          block:
+                 - - \[
+                   - \]
+                 - - $$
+                   - $$
+          inline:
+            - - \(
+              - \)
+            - - $
+              - $
+        enable: true
   
   # Highlight style of code
   highlight:
@@ -295,7 +308,7 @@ params:
   toc:
     enable: true
     # Automatically add list number to toc
-    number: true
+    number: false
     # Enable auto wrap display
     wrap: false
     # Auto expand all levels

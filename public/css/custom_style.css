@@ -2,3 +2,14 @@
 :root {
   --color-overlay: rgba(0, 0, 0, 0.5);
 }
+
+/* Make KaTeX math formulas smaller */
+.katex {
+  font-size: 0.85em !important;
+}
+
+/* Optional: Make display math even smaller if needed */
+.katex-display .katex {
+  font-size: 0.8em !important;
+}
+
