@@ -571,9 +571,7 @@ params:
 
   # ---------------------------------------------------------------
   # Third Party Plugins & Services Settings
-  # ---------------------------------------------------------------
-
-  # Math Formulas Render Support, options: mathjax, katex
+  # --------------------------------------------------------------
  
 
   # FancyBox image zoom

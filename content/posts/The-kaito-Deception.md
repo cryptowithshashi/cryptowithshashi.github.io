@@ -2,7 +2,7 @@
 title: "The Kaito Deception: Unmasking the Web3's Most Profitable Manipulation Engine"
 date: 2025-09-13T12:00:00+05:30
 draft: false
-math: true
+math: "katex"
 author: "Shashi"
 categories: ["case-studies"]
 tags: ["kaito","Manipulation"]
@@ -12,19 +12,7 @@ Empirical analysis reveals consistent patterns supporting both models: campaigns
 The study concludes with operational diagnostics for independent verification and transparency demands including publication of scoring algorithms, budget allocation mechanisms, and independent auditing protocols. The core finding is that Kaito functions as a centralized attention marketplace while marketing itself as a decentralized information finance platform, creating systematic value extraction from both projects and community participants."
 ---
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-    renderMathInElement(document.body, {
-        delimiters: [
-            {left: '$$', right: '$$', display: true},
-            {left: '$', right: '$', display: false}
-        ]
-    });
-});
-</script>
+
 
 # The Kaito Deception: Unmasking the Web3's Most Profitable Manipulation Engine
 
