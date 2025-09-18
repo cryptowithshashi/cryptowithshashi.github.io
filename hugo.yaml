@@ -205,6 +205,9 @@ params:
   # Page Schemes
   scheme: Gemini
 
+  # Maths used  
+  math: katex
+
   # Dark Mode
   darkmode: false
 
@@ -572,7 +575,7 @@ params:
   # ---------------------------------------------------------------
 
   # Math Formulas Render Support, options: mathjax, katex
-  #math: mathjax
+ 
 
   # FancyBox image zoom
   fancybox: false
