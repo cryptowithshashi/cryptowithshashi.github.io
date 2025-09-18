@@ -205,7 +205,7 @@ params:
   # Page Schemes
   scheme: Gemini
 
-  math: true
+
 
   # Dark Mode
   darkmode: false
