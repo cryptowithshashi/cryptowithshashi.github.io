@@ -2,7 +2,7 @@
 title: "The Kaito Deception: Unmasking the Web3's Most Profitable Manipulation Engine"
 date: 2025-09-13T12:00:00+05:30
 draft: false
-math: "katex"
+katex: "true"
 author: "Shashi"
 categories: ["case-studies"]
 tags: ["kaito","Manipulation"]
