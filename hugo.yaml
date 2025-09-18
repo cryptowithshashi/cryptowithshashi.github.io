@@ -205,7 +205,7 @@ params:
   # Page Schemes
   scheme: Gemini
 
-
+  katex: true
 
   # Dark Mode
   darkmode: false
