@@ -205,11 +205,7 @@ params:
   # Page Schemes
   scheme: Gemini
 
-  # Math Formulas Render Support
-  math:
-    enable: true
-    # Available values: mathjax | katex
-    engine: katex
+  math: true
 
   # Dark Mode
   darkmode: false
