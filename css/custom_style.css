@@ -13,3 +13,8 @@
   font-size: 0.8em !important;
 }
 
+/* Hide horizontal scrollbar */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
