@@ -205,10 +205,13 @@ params:
   # Page Schemes
   scheme: Gemini
 
-  katex: true
-
   # Dark Mode
   darkmode: false
+
+  # Math rendering
+  math: "katex"
+  # or
+  math: "mathjax"
 
   # Site Information Settings
   author: Shashi
@@ -224,7 +227,7 @@ params:
     appleTouchIcon: /imgs/icons/apple_touch_icon_next.png
 
   # Custom Logo (Warning: Only support scheme Mist)
-  customLogo: #/imgs/hugo_next_logo.png
+  # customLogo: #/imgs/hugo_next_logo.png
 
   # Define custom file paths
   customFilePath:
@@ -563,11 +566,11 @@ params:
     icon: true
 
   # Google Webmaster tools verification
-  googleSiteVerification: #<verify_code>
+  # googleSiteVerification: #<verify_code>
   # Bing Webmaster tools verification
-  bingSiteVerification: #<verify_code>
+  # bingSiteVerification: #<verify_code>
   # Yandex Webmaster tools verification
-  yandexSiteVerification: #<verify_code>
+  # yandexSiteVerification: #<verify_code>
 
   # ---------------------------------------------------------------
   # Third Party Plugins & Services Settings
