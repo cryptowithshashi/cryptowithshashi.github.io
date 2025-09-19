@@ -536,7 +536,13 @@ $$w_{type(e)} = \begin{cases}1.0 & \text{if } type(e) = reply \\0.7 & \text{if }
 
 The core scoring function integrates all X-enhanced factors:
 
-$$s_i = \left( \sum_{e \in E_i} w_{type(e)} \cdot rep(u_e) \cdot CM(u_e, author_i) \cdot (1 + \mu \cdot PEdge(u_e, author_i)) \right)^a\times (1 + insight_i)\times \exp(-t_i / \tau)\times (1 - farmProb_i)^\gamma\times (1 + \beta \cdot YapPrior_{author_i})\times (1 + \eta \cdot Dwell_i + \kappa \cdot ProfileClicks_i + \lambda \cdot ShowMore_i)$$
+$$\begin{aligned}
+s_i &= \left( \sum_{e \in E_i} w_{type(e)} \cdot rep(u_e) \cdot CM(u_e, author_i) \cdot (1 + \mu \cdot PEdge(u_e, author_i)) \right)^a \\
+&\quad \times (1 + insight_i) \times \exp(-t_i / \tau) \\
+&\quad \times (1 - farmProb_i)^\gamma \times (1 + \beta \cdot YapPrior_{author_i}) \\
+&\quad \times (1 + \eta \cdot Dwell_i + \kappa \cdot ProfileClicks_i + \lambda \cdot ShowMore_i)
+\end{aligned}$$
+
 
 **Parameter Definitions:**
 
