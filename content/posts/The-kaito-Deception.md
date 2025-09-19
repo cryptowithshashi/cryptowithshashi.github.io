@@ -388,7 +388,7 @@ This write-up explains that **Precision Model** in plain language first, then gi
 
 Kaito assigns every user to a precise community cluster (e.g., “SaaS founders who are crypto-native, follow X/Y/Z”). This placement is updated weekly or continuously using follow/interaction graphs.
 
-<img src="/imgs/kaito/step1.png" />
+<img src="/imgs/kaito/Step1.png" />
 
 ### Step 2 : Smart-follower validation
 
@@ -404,7 +404,7 @@ When you post about Project-X, Kaito:
 
 These early, high-quality signals make X's own algorithms test and promote the post to a broader audience, and essentially a two-step amplification: Kaito → cluster → X.
 
-<img src="/imgs/kaito/step2.png" />
+<img src="/imgs/kaito/Step2.png" />
 
 ### Step 4 : Scoring uses deep signals
 
@@ -420,7 +420,7 @@ Rather than counting likes and retweets alone, the post is scored using:
 
 Kaito can create cluster-level competitions and tiered rewards (emerging / growing / established) so many clusters each have their “winners.” This preserves hope for small accounts — they see local winners and believe “anyone can win” — while the platform concentrates power and repeat winners across clusters.
 
-<img src="/imgs/kaito/step3.png" />
+<img src="/imgs/kaito/Step3.png" />
 
 ### Step 6 : Long-term network building
 
