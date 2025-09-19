@@ -766,4 +766,4 @@ params:
     internal: local
     # The default CDN provider of third-party plugins
     # Available values: local | cdnjs | unpkg | jsdelivr | staticfile | bootcdn | 7ed | zstatic | zeyao | custom
-    plugins: local
+    plugins: jsdelivr
