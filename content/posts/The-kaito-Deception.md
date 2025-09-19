@@ -2,7 +2,7 @@
 title: "The Kaito Deception: Unmasking the Web3's Most Profitable Manipulation Engine"
 date: 2025-09-13T12:00:00+05:30
 draft: false
-math: mathjax
+math: "katex"
 author: "Shashi"
 categories: ["case-studies"]
 tags: ["kaito","Manipulation"]
@@ -177,482 +177,482 @@ For projects paying $150,000+, they get exactly what they want: sustained, high-
 The lack of algorithmic transparency isn't a bug, it's the core feature that enables the entire system to function as designed. In a truly decentralized system, users would have visibility into how rewards are distributed. In Kaito's system, opacity is essential for the pyramid to operate without user revolt.
 This model represents the evolution of digital labor exploitation: sophisticated enough to appear fair, complex enough to resist easy gaming, and profitable enough to attract major partnerships. It's the perfect extraction machine for the Web3 era.
 
-    # The Core Scoring Engine: Calculating a Post's "Influence Score"
+# The Core Scoring Engine: Calculating a Post's "Influence Score"
 
-    Every post about a Kaito project is fed through the Master Algorithm to generate a raw **Influence Score**, let's call it ($s_i$). The dense formula provided in the analysis can be broken down into four understandable parts:
+Every post about a Kaito project is fed through the Master Algorithm to generate a raw **Influence Score**, let's call it ($s_i$). The dense formula provided in the analysis can be broken down into four understandable parts:
 
-    $${\small s_i = \text{(Engagement Power)} \times \text{(Content Quality)} \times \text{(Time Decay)} \times \text{(Anti-Farm Multiplier)}}$$
+$${\small s_i = \text{(Engagement Power)} \times \text{(Content Quality)} \times \text{(Time Decay)} \times \text{(Anti-Farm Multiplier)}}$$
 
-    Let's look at each component:
+Let's look at each component:
 
-    - **Engagement Power**: This is the most important factor. For every engagement (like, reply, etc.), the algorithm multiplies the **type of interaction** (e.g., a reply is worth more than a like) by the **reputation of the user who engaged**. A reply from a top-tier **Inner Circle** account generates a massive score.
+- **Engagement Power**: This is the most important factor. For every engagement (like, reply, etc.), the algorithm multiplies the **type of interaction** (e.g., a reply is worth more than a like) by the **reputation of the user who engaged**. A reply from a top-tier **Inner Circle** account generates a massive score.
 
-    $$
-    e∑wtype(e)⋅rep(ue)
-    $$
+$$
+e∑wtype(e)⋅rep(ue)
+$$
 
-    - **Content Quality**: This is the score from Kaito's AI/LLM. It analyzes the post for originality, depth, and relevance. A well-researched thread gets a high **insight** score, while a generic **LFG** tweet gets a score near zero.
+- **Content Quality**: This is the score from Kaito's AI/LLM. It analyzes the post for originality, depth, and relevance. A well-researched thread gets a high **insight** score, while a generic **LFG** tweet gets a score near zero.
 
-    $$
-    (1+insighti)
-    $$
+$$
+(1+insighti)
+$$
 
-    - **Time Decay**: An exponential decay function. The score of a post rapidly decreases over time. Engagement within the first hour is critical; after a few hours, the post is worth a fraction of its initial potential.
+- **Time Decay**: An exponential decay function. The score of a post rapidly decreases over time. Engagement within the first hour is critical; after a few hours, the post is worth a fraction of its initial potential.
 
-    $$
-    exp(−τti)
-    $$
+$$
+exp(−τti)
+$$
 
-    - **Anti-Farm Multiplier**: A penalty factor. If the algorithm detects behavior associated with farming circles or AI-generated spam, it assigns a high "farm probability," drastically reducing the post's final score.
+- **Anti-Farm Multiplier**: A penalty factor. If the algorithm detects behavior associated with farming circles or AI-generated spam, it assigns a high "farm probability," drastically reducing the post's final score.
 
-    $$
-    (1−farmProbi)γ
-    $$
+$$
+(1−farmProbi)γ
+$$
 
 
-    > [!NOTE]
-    >This ($s_i$) score is the fundamental unit of value for every post. The next question is how Kaito distributes its 1,000 Yaps/hour budget based on the scores of thousands of competing posts.
+> [!NOTE]
+>This ($s_i$) score is the fundamental unit of value for every post. The next question is how Kaito distributes its 1,000 Yaps/hour budget based on the scores of thousands of competing posts.
 
-    ## The Distribution Architecture: Where Do the Yaps Go?
+## The Distribution Architecture: Where Do the Yaps Go?
 
-    This is where Kaito's project-specific tuning comes into play.
+This is where Kaito's project-specific tuning comes into play.
 
-    ### Architecture A: Global Pool Competition (The Brutal Free-for-All)
+### Architecture A: Global Pool Competition (The Brutal Free-for-All)
 
-    In this model, all 80+ projects compete for the same **single pool of 1,000 Yaps per hour**.
+In this model, all 80+ projects compete for the same **single pool of 1,000 Yaps per hour**.
 
-    - **How it Works:** The algorithm sums up the Influence Scores ($s_i$) of every single eligible post across all projects in a given hour. Your post's share of the 1,000 Yaps is proportional to its score relative to the total.
+- **How it Works:** The algorithm sums up the Influence Scores ($s_i$) of every single eligible post across all projects in a given hour. Your post's share of the 1,000 Yaps is proportional to its score relative to the total.
 
-    $$
-    Formula: yapsi=1000⋅si/∑jsjsi 
-    $$
+$$
+Formula: yapsi=1000⋅si/∑jsjsi 
+$$
 
-    > [!Info]
-    > where j is every post in that hour
+> [!Info]
+> where j is every post in that hour
 
-    **Effect:** This system would heavily favor projects that are already massive and have huge communities
+**Effect:** This system would heavily favor projects that are already massive and have huge communities
 
-    A post about a smaller project would be completely drowned out, as the total engagement for Bigger projects would vastly inflate the denominator (∑sj), leaving almost no Yaps for anyone else. **This model is bad for Kaito's business**, as no smaller project would pay for a campaign they can't win.
+A post about a smaller project would be completely drowned out, as the total engagement for Bigger projects would vastly inflate the denominator (∑sj), leaving almost no Yaps for anyone else. **This model is bad for Kaito's business**, as no smaller project would pay for a campaign they can't win.
 
-    ### Architecture B: Per-Project Pool Competition (The Smart, Configurable Model)
+### Architecture B: Per-Project Pool Competition (The Smart, Configurable Model)
 
-    <img src="/imgs/kaito/archb.png" />
+<img src="/imgs/kaito/archb.png" />
 
-    This is the model that aligns with your intuition. The global budget of 1,000 Yaps is intelligently split among the active projects, creating separate competitive arenas.
+This is the model that aligns with your intuition. The global budget of 1,000 Yaps is intelligently split among the active projects, creating separate competitive arenas.
 
-    - **How it Works:** The 1,000 Yaps/hour budget is divided into sub-pools for each project. The size of each project's sub-pool is **dynamic and proportional to its current Mindshare**. Projects with more buzz get a larger share of the hourly budget.
+- **How it Works:** The 1,000 Yaps/hour budget is divided into sub-pools for each project. The size of each project's sub-pool is **dynamic and proportional to its current Mindshare**. Projects with more buzz get a larger share of the hourly budget.
 
-    ### 1. Formula for Budget Split:
+### 1. Formula for Budget Split:
 
-    $$B_{P} = 1000 \cdot \frac{A_{P}^{\theta}}{\sum_{Q} A_{Q}^{\theta}}$$
+$$B_{P} = 1000 \cdot \frac{A_{P}^{\theta}}{\sum_{Q} A_{Q}^{\theta}}$$
 
-    - ($B_p$) - Hourly yap budget assigned to project P.
-    - ($A_p$) - Mindshare/activity for project P (eg. weighted posts/hour).
-    - $\theta$ - sensitivity parameter(higher $\theta$ --> amplify high-activity projects).
+- ($B_p$) - Hourly yap budget assigned to project P.
+- ($A_p$) - Mindshare/activity for project P (eg. weighted posts/hour).
+- $\theta$ - sensitivity parameter(higher $\theta$ --> amplify high-activity projects).
 
-    ### 2. Formula for Yap Allocation: 
+### 2. Formula for Yap Allocation: 
 
-    $$\mathrm{yaps}_i = B_P \cdot \frac{s_i}{\sum_{j \in P} s_j}$$
+$$\mathrm{yaps}_i = B_P \cdot \frac{s_i}{\sum_{j \in P} s_j}$$
 
-    ($s_i$) is the raw influence score for post *i* (only post *j* belonging to the project P are in the denominator).
+($s_i$) is the raw influence score for post *i* (only post *j* belonging to the project P are in the denominator).
 
-    ### 3. Raw influence score ($sis_{i}si$) (compact, with Yap prior):
+### 3. Raw influence score ($sis_{i}si$) (compact, with Yap prior):
 
-    $${\small s_i = \left(\sum_{e \in E_i} w_{\text{type}(e)} \cdot \mathrm{rep}(u_e)\right)^a \cdot \big(1+\mathrm{insight}_i\big) \cdot \exp\left(-t_i / \tau\right) \cdot \big(1 - \mathrm{farmProb}_i\big)^\gamma \cdot \big(1 + \beta \cdot \mathrm{YapPrior}_{\text{author}(i)}\big)}$$
+$${\small s_i = \left(\sum_{e \in E_i} w_{\text{type}(e)} \cdot \mathrm{rep}(u_e)\right)^a \cdot \big(1+\mathrm{insight}_i\big) \cdot \exp\left(-t_i / \tau\right) \cdot \big(1 - \mathrm{farmProb}_i\big)^\gamma \cdot \big(1 + \beta \cdot \mathrm{YapPrior}_{\text{author}(i)}\big)}$$
 
-    • ($E_i$) : engagements on post ($i$) within the monitoring window.
+• ($E_i$) : engagements on post ($i$) within the monitoring window.
 
-    • ($w_{\text{type}(e)}$) : weight by engagement type (reply, quote, retweet, like).
+• ($w_{\text{type}(e)}$) : weight by engagement type (reply, quote, retweet, like).
 
-    • ($\text{rep}(u)$) : reputation weight of engager ($u$).
+• ($\text{rep}(u)$) : reputation weight of engager ($u$).
 
-    • ($a$) : concavity/exponent on engagement power.
+• ($a$) : concavity/exponent on engagement power.
 
-    • ($\text{insight}_i$) : content-quality/uniqueness score (LLM-based).
+• ($\text{insight}_i$) : content-quality/uniqueness score (LLM-based).
 
-    • ($t_i$) : minutes since post (use the evaluation time; early minutes matter).
+• ($t_i$) : minutes since post (use the evaluation time; early minutes matter).
 
-    • ($\tau$) : time-decay timescale (e.g., 30-90).
+• ($\tau$) : time-decay timescale (e.g., 30-90).
 
-    • ($\text{farmProb}_i$) : predicted farm probability (0..1).
+• ($\text{farmProb}_i$) : predicted farm probability (0..1).
 
-    • ($\gamma$) : farm-penalty sensitivity.
+• ($\gamma$) : farm-penalty sensitivity.
 
-    • ($\text{YapPrior}_{\text{author}}$) : author's historical Yap score (normalized).
+• ($\text{YapPrior}_{\text{author}}$) : author's historical Yap score (normalized).
 
-    • ($\beta$) : strength of the Yap-prior boost.
+• ($\beta$) : strength of the Yap-prior boost.
 
-    ### 4. Example rep(u) (Yap + smart followers + inner circle)
+### 4. Example rep(u) (Yap + smart followers + inner circle)
 
-    $$\mathrm{rep}(u) = \log(1 + \text{smart\_followers}_u) \times (1 + \alpha \mathbf{1}_{\text{inner}_u}) \times (1 + \delta \mathbf{1}_{\text{verified}_u})$$
+$$\mathrm{rep}(u) = \log(1 + \text{smart\_followers}_u) \times (1 + \alpha \mathbf{1}_{\text{inner}_u}) \times (1 + \delta \mathbf{1}_{\text{verified}_u})$$
 
-    - $\mathbf{1}_{\text{inner}_u}$ is 1 if user $u$ is in inner circle; $\alpha$ is the inner boost.
+- $\mathbf{1}_{\text{inner}_u}$ is 1 if user $u$ is in inner circle; $\alpha$ is the inner boost.
 
-    - $\mathbf{1}_{\text{verified}_u}$ is verification flag; $\delta$ its boost.
+- $\mathbf{1}_{\text{verified}_u}$ is verification flag; $\delta$ its boost.
 
-    ### 5. Leaderboard aggregation (campaign window)
+### 5. Leaderboard aggregation (campaign window)
 
-    Cumulative yaps for user on project PPP over campaign window ($T0,T1$), ($T_0$), ($T_1$), ($T0,T1$):
+Cumulative yaps for user on project PPP over campaign window ($T0,T1$), ($T_0$), ($T_1$), ($T0,T1$):
 
-    $$\mathrm{yapPoints}_{u}^{P} = \sum_{t \in [T_0,T_1]} \mathrm{yaps}_{u,t}^{P}$$
+$$\mathrm{yapPoints}_{u}^{P} = \sum_{t \in [T_0,T_1]} \mathrm{yaps}_{u,t}^{P}$$
 
-    - where $\mathrm{yaps}_{u,t}^P$ are yaps earned by user $u$ for project $P$ during hour $t$.
+- where $\mathrm{yaps}_{u,t}^P$ are yaps earned by user $u$ for project $P$ during hour $t$.
 
-    ### 6. Conversion from YapPoints to project tokens
+### 6. Conversion from YapPoints to project tokens
 
-    Proportional conversion:
+Proportional conversion:
 
-    $$\mathrm{tokens}_{u}^{P} = R_{P}^{\text{total}} \cdot \frac{\mathrm{yapPoints}_{u}^{P}}{\sum_{v} \mathrm{yapPoints}_{v}^{P}}$$
+$$\mathrm{tokens}_{u}^{P} = R_{P}^{\text{total}} \cdot \frac{\mathrm{yapPoints}_{u}^{P}}{\sum_{v} \mathrm{yapPoints}_{v}^{P}}$$
 
-    - $R_P^{\text{total}}$ : total token pool promised by project $P$ for the campaign.
+- $R_P^{\text{total}}$ : total token pool promised by project $P$ for the campaign.
 
-    **Ranked (Top-K) conversion : tiered example**
+**Ranked (Top-K) conversion : tiered example**
 
-    If project uses top-K tiers (e.g., top 1 gets $T_1$ tokens, next block gets $T_2$, ...):
+If project uses top-K tiers (e.g., top 1 gets $T_1$ tokens, next block gets $T_2$, ...):
 
-    $$\mathrm{tokens}_{u}^{P} = \begin{cases}
-    T_1 & \text{if } \mathrm{rank}_P(u) = 1 \\
-    T_2 & \text{if } 2 \le \mathrm{rank}_P(u) \le K_2 \\
-    \vdots & \\
-    0 & \text{otherwise}
-    \end{cases}$$
+$$\mathrm{tokens}_{u}^{P} = \begin{cases}
+T_1 & \text{if } \mathrm{rank}_P(u) = 1 \\
+T_2 & \text{if } 2 \le \mathrm{rank}_P(u) \le K_2 \\
+\vdots & \\
+0 & \text{otherwise}
+\end{cases}$$
 
-    - Ranked/top-K mapping concentrates tokens and is far steeper than proportional conversion.
+- Ranked/top-K mapping concentrates tokens and is far steeper than proportional conversion.
 
-    ## Tiny numeric sensitivity example (makes pyramid tangible)
+## Tiny numeric sensitivity example (makes pyramid tangible)
 
-    **Setup:** $B_P = 100$ (yaps/hour for one project). Suppose five posts in the hour have influence scores
+**Setup:** $B_P = 100$ (yaps/hour for one project). Suppose five posts in the hour have influence scores
 
-    $$s = [100, 50, 25, 10, 5]$$
+$$s = [100, 50, 25, 10, 5]$$
 
-    - Sum $\sum s = 190$.
+- Sum $\sum s = 190$.
 
-    **Yap allocation:**
+**Yap allocation:**
 
-    $$\text{yaps} = 100 \cdot \frac{s}{190} \Rightarrow [52.6316, 26.3158, 13.1579, 5.2632, 2.6316]$$
+$$\text{yaps} = 100 \cdot \frac{s}{190} \Rightarrow [52.6316, 26.3158, 13.1579, 5.2632, 2.6316]$$
 
-    (rounded: $[52.63, 26.32, 13.16, 5.26, 2.63]$ : they sum to 100).
+(rounded: $[52.63, 26.32, 13.16, 5.26, 2.63]$ : they sum to 100).
 
-    **Convert to tokens (example)**
+**Convert to tokens (example)**
 
-    - **Proportional:** $R_P^{\text{total}} = 1000$ tokens over window (scaled by same shares):
+- **Proportional:** $R_P^{\text{total}} = 1000$ tokens over window (scaled by same shares):
 
-    $$\text{tokens} \approx 1000 \cdot \frac{\text{yaps}}{100} = [526.32, 263.16, 131.58, 52.63, 26.32]$$
+$$\text{tokens} \approx 1000 \cdot \frac{\text{yaps}}{100} = [526.32, 263.16, 131.58, 52.63, 26.32]$$
 
-    - **Ranked (top-3 tiers example):** Top1 = 600 tokens, Top2 = 300, Top3 = 100, rest = 0 → extreme concentration.
+- **Ranked (top-3 tiers example):** Top1 = 600 tokens, Top2 = 300, Top3 = 100, rest = 0 → extreme concentration.
 
-    This demonstrates how even moderate score differences translate into very skewed rewards under normalization and, even more so, under ranked conversions.
+This demonstrates how even moderate score differences translate into very skewed rewards under normalization and, even more so, under ranked conversions.
 
-    - $\theta = 1.0$ (mindshare sensitivity)
-    - $\alpha = 1.0$ (engagement exponent)
-    - $\tau = 45.0$ (minutes; time-decay timescale)
-    - $\beta = 0.5$ (Yap-prior strength)
-    - $\gamma = 2.0$ (farm penalty exponent)
-    - $\alpha = 0.2$ (inner-circle boost example)
-    - $\delta = 0.1$ (verified boost example)
+- $\theta = 1.0$ (mindshare sensitivity)
+- $\alpha = 1.0$ (engagement exponent)
+- $\tau = 45.0$ (minutes; time-decay timescale)
+- $\beta = 0.5$ (Yap-prior strength)
+- $\gamma = 2.0$ (farm penalty exponent)
+- $\alpha = 0.2$ (inner-circle boost example)
+- $\delta = 0.1$ (verified boost example)
 
-    > *Use these as starting points when you simulate or fit to data.*
+> *Use these as starting points when you simulate or fit to data.*
 
-    ## The Final Payout: Mapping Yaps to Project Rewards
+## The Final Payout: Mapping Yaps to Project Rewards
 
-    After a campaign period ends, the Yaps earned on a specific leaderboard are used to distribute the project's actual reward pool.
+After a campaign period ends, the Yaps earned on a specific leaderboard are used to distribute the project's actual reward pool.
 
-    - **Ranked (Top-K) Payout:** This is the most common and enforces the pyramid structure.
-    - **Proportional Payout:** This is used for broader distributions.
+- **Ranked (Top-K) Payout:** This is the most common and enforces the pyramid structure.
+- **Proportional Payout:** This is used for broader distributions.
 
-    Kaito almost certainly uses **Architecture B (Per-Project Pools)**, likely in a hybrid form. A purely global system would be unworkable for their business model. By creating separate competitive arenas for each project and dynamically funding them based on Mindshare, Kaito achieves two key goals:
+Kaito almost certainly uses **Architecture B (Per-Project Pools)**, likely in a hybrid form. A purely global system would be unworkable for their business model. By creating separate competitive arenas for each project and dynamically funding them based on Mindshare, Kaito achieves two key goals:
 
-    1. **It delivers value to its partners:** Every project, big or small, gets a dedicated budget and a real chance for its community to earn, justifying the partnership fee.
-    2. **It reinforces the Pyramid:** Within each of these 80+ arenas, the same ruthless pyramid dynamic plays out. A small number of top KOLs dominate the leaderboard for that specific project, capturing the largest share of that project's reward pool, while the broad base of users provides the content and engagement that generates the Mindshare needed to fund the pool in the first place.
+1. **It delivers value to its partners:** Every project, big or small, gets a dedicated budget and a real chance for its community to earn, justifying the partnership fee.
+2. **It reinforces the Pyramid:** Within each of these 80+ arenas, the same ruthless pyramid dynamic plays out. A small number of top KOLs dominate the leaderboard for that specific project, capturing the largest share of that project's reward pool, while the broad base of users provides the content and engagement that generates the Mindshare needed to fund the pool in the first place.
 
-    # The Precision Model: How Kaito Could Weaponize Community Intelligence
+# The Precision Model: How Kaito Could Weaponize Community Intelligence
 
-    While the Pyramid Model assumes Kaito makes educated guesses about user influence and community belonging, the **X-Enhanced Model** operates on a fundamentally different principle: **perfect information**.
+While the Pyramid Model assumes Kaito makes educated guesses about user influence and community belonging, the **X-Enhanced Model** operates on a fundamentally different principle: **perfect information**.
 
-    With access to Twitter's open-source algorithm and API data, Kaito doesn't need to guess anything. They **know exactly** which of Twitter's 145,000 invisible communities each user belongs to, their precise engagement patterns, and their real influence networks.
+With access to Twitter's open-source algorithm and API data, Kaito doesn't need to guess anything. They **know exactly** which of Twitter's 145,000 invisible communities each user belongs to, their precise engagement patterns, and their real influence networks.
 
-    This transforms Kaito from a crude engagement farm into something far more sophisticated: **a precision social engineering platform**.
+This transforms Kaito from a crude engagement farm into something far more sophisticated: **a precision social engineering platform**.
 
-    This write-up explains that **Precision Model** in plain language first, then gives the operational flow and the practical implications for users, projects, and the broader crypto ecosystem. For a non-technical overview, please refer to the beginner-friendly explanation provided.
+This write-up explains that **Precision Model** in plain language first, then gives the operational flow and the practical implications for users, projects, and the broader crypto ecosystem. For a non-technical overview, please refer to the beginner-friendly explanation provided.
 
-    ## what does “precision” mean?
+## what does “precision” mean?
 
-    - Instead of counting followers, the platform maps each user into a *precise* community (one of >100k micro-clusters).
-    - Kaito validates a users **smart followers** using cluster overlap, not raw follower numbers.
-    - When someone posts, Kaito *seeds* the post into a carefully chosen sample of cluster members to produce early, highly-relevant signals.
-    - It rewards *permanent edges* (two-way replies) that generate long-term visibility and values deep engagement signals (dwell, profile clicks, thread reads) that indicate real attention — not reflexive likes.
+- Instead of counting followers, the platform maps each user into a *precise* community (one of >100k micro-clusters).
+- Kaito validates a users **smart followers** using cluster overlap, not raw follower numbers.
+- When someone posts, Kaito *seeds* the post into a carefully chosen sample of cluster members to produce early, highly-relevant signals.
+- It rewards *permanent edges* (two-way replies) that generate long-term visibility and values deep engagement signals (dwell, profile clicks, thread reads) that indicate real attention — not reflexive likes.
 
-    > **The result**: posts that look **organic** can be surgically amplified, winners are crafted inside clusters, and the platform can guarantee outcomes to paying projects with far greater certainty than a blind pyramid model.
+> **The result**: posts that look **organic** can be surgically amplified, winners are crafted inside clusters, and the platform can guarantee outcomes to paying projects with far greater certainty than a blind pyramid model.
 
-    ### Step 1 : Community placement
+### Step 1 : Community placement
 
-    Kaito assigns every user to a precise community cluster (e.g., “SaaS founders who are crypto-native, follow X/Y/Z”). This placement is updated weekly or continuously using follow/interaction graphs.
+Kaito assigns every user to a precise community cluster (e.g., “SaaS founders who are crypto-native, follow X/Y/Z”). This placement is updated weekly or continuously using follow/interaction graphs.
 
-    <img src="/imgs/kaito/step1.png" />
+<img src="/imgs/kaito/step1.png" />
 
-    ### Step 2 : Smart-follower validation
+### Step 2 : Smart-follower validation
 
-    Kaito doesn't just count followers. It checks whether your followers are *relevant* (cluster-validated). Fake or irrelevant followers are devalued — real influence is measured inside your cluster.
+Kaito doesn't just count followers. It checks whether your followers are *relevant* (cluster-validated). Fake or irrelevant followers are devalued — real influence is measured inside your cluster.
 
-    ### Step 3 : Post arrives - targeted seeding
+### Step 3 : Post arrives - targeted seeding
 
-    When you post about Project-X, Kaito:
+When you post about Project-X, Kaito:
 
-    1. computes which **clusters** are most relevant to the post and author,
-    2. selects a small set of Kaito users inside that cluster who are likely online and **high-rep**, and
-    3. nudges or notifies them (or encourages organic support) to generate early replies/reads.
+1. computes which **clusters** are most relevant to the post and author,
+2. selects a small set of Kaito users inside that cluster who are likely online and **high-rep**, and
+3. nudges or notifies them (or encourages organic support) to generate early replies/reads.
 
-    These early, high-quality signals make X's own algorithms test and promote the post to a broader audience, and essentially a two-step amplification: Kaito → cluster → X.
+These early, high-quality signals make X's own algorithms test and promote the post to a broader audience, and essentially a two-step amplification: Kaito → cluster → X.
 
-    <img src="/imgs/kaito/step2.png" />
+<img src="/imgs/kaito/step2.png" />
 
-    ### Step 4 : Scoring uses deep signals
+### Step 4 : Scoring uses deep signals
 
-    Rather than counting likes and retweets alone, the post is scored using:
+Rather than counting likes and retweets alone, the post is scored using:
 
-    - who engaged (cluster-matched influencers vs outsiders),
-    - whether early replies created *permanent edges* (two-way replies),
-    - deep-engagement proxies (dwell time, profile clicks, thread expansions),
-    - content quality (insight/originality),
-    - farmer detection (penalize suspicious patterns).
+- who engaged (cluster-matched influencers vs outsiders),
+- whether early replies created *permanent edges* (two-way replies),
+- deep-engagement proxies (dwell time, profile clicks, thread expansions),
+- content quality (insight/originality),
+- farmer detection (penalize suspicious patterns).
 
-    ### Step 5 : Cluster competitions + illusions of fairness
+### Step 5 : Cluster competitions + illusions of fairness
 
-    Kaito can create cluster-level competitions and tiered rewards (emerging / growing / established) so many clusters each have their “winners.” This preserves hope for small accounts — they see local winners and believe “anyone can win” — while the platform concentrates power and repeat winners across clusters.
+Kaito can create cluster-level competitions and tiered rewards (emerging / growing / established) so many clusters each have their “winners.” This preserves hope for small accounts — they see local winners and believe “anyone can win” — while the platform concentrates power and repeat winners across clusters.
 
-    <img src="/imgs/kaito/step3.png" />
+<img src="/imgs/kaito/step3.png" />
 
-    ### Step 6 : Long-term network building
+### Step 6 : Long-term network building
 
-    Strategic users who repeatedly form two-way ties (permanent edges) get persistent visibility across future posts. These edges compound: a handful of network-builders can lock in outsized influence
+Strategic users who repeatedly form two-way ties (permanent edges) get persistent visibility across future posts. These edges compound: a handful of network-builders can lock in outsized influence
 
-    ## Why this model is more powerful (and more dangerous) than the pyramid model
+## Why this model is more powerful (and more dangerous) than the pyramid model
 
-    1. **Precision = predictability.** Instead of random exploration, the platform tests in the *right* group. That increases the probability that a post will “take off”.
-    2. **Manufactured organic virality.** Early cluster seeding looks natural but is orchestrated — making detection hard.
-    3. **Persistent influence infrastructure.** Permanent edges turn one-off campaigns into long-term influence channels.
-    4. **Deep engagement beats vanity metrics.** The platform optimizes for attention (reading, profile inspection) not just clicks, this better predicts future spread and real-world action (e.g., token buys).
-    5. **Business guarantees.** With cluster targeting and early seeding, Kaito can deliver higher ROI to paying projects and charge much more for “precision” services.
-    - Author reputation (Yap prior) still matters,  it gives a baseline.
-    - Early intra-cluster replies from high-rep cluster members multiply your chances far more than random likes.
-    - If you get a reply and the target replies back (mutual reply), that becomes a “permanent edge” and improves visibility of your posts for weeks.
-    - Deep actions — reading the whole thread, clicking links, checking your profile, matter more than a like.
-    - Kaito mixes two budgets: a project-level pool and a small global exploration pool. The project pool rewards cluster-winners; the global pool finds surprises.
+1. **Precision = predictability.** Instead of random exploration, the platform tests in the *right* group. That increases the probability that a post will “take off”.
+2. **Manufactured organic virality.** Early cluster seeding looks natural but is orchestrated — making detection hard.
+3. **Persistent influence infrastructure.** Permanent edges turn one-off campaigns into long-term influence channels.
+4. **Deep engagement beats vanity metrics.** The platform optimizes for attention (reading, profile inspection) not just clicks, this better predicts future spread and real-world action (e.g., token buys).
+5. **Business guarantees.** With cluster targeting and early seeding, Kaito can deliver higher ROI to paying projects and charge much more for “precision” services.
+- Author reputation (Yap prior) still matters,  it gives a baseline.
+- Early intra-cluster replies from high-rep cluster members multiply your chances far more than random likes.
+- If you get a reply and the target replies back (mutual reply), that becomes a “permanent edge” and improves visibility of your posts for weeks.
+- Deep actions — reading the whole thread, clicking links, checking your profile, matter more than a like.
+- Kaito mixes two budgets: a project-level pool and a small global exploration pool. The project pool rewards cluster-winners; the global pool finds surprises.
 
-    ## A small numeric illustration (how small changes create big effects)
+## A small numeric illustration (how small changes create big effects)
 
-    Two posts with identical raw likes/replies:
+Two posts with identical raw likes/replies:
 
-    - Post A: early replies are from two cluster-matched high-rep accounts, and one becomes a mutual-reply edge. Post A gets cluster boost and permanent-edge multiplier → final score doubles.
-    - Post B: early replies are from random low-rep accounts (outside cluster) → no cluster boost, no permanent-edge → final score remains baseline.
+- Post A: early replies are from two cluster-matched high-rep accounts, and one becomes a mutual-reply edge. Post A gets cluster boost and permanent-edge multiplier → final score doubles.
+- Post B: early replies are from random low-rep accounts (outside cluster) → no cluster boost, no permanent-edge → final score remains baseline.
 
-    When scores are normalized inside a project pool, Post A receives 2–5× more YAPs than Post B — and if token conversion uses a ranked top-K, that difference translates to a massively different token payout.
+When scores are normalized inside a project pool, Post A receives 2–5× more YAPs than Post B — and if token conversion uses a ranked top-K, that difference translates to a massively different token payout.
 
-    - **Intra-cluster early fraction**: the first 10 engagers are disproportionately from the same cluster compared to a shuffled baseline.
-    - **Permanent-edge uplift**: after a mutual-reply occurs, the target engages with the author far more often than before.
-    - **Early, concentrated bursts**: posts that get a small, fast, tightly-clustered burst of activity inside the first 10–30 minutes.
-    - **Deep-engagement correlation**: thread expansions / link clicks / profile views predict final YAPs more strongly than raw like counts.
-    - **Tiered winners across clusters**: many different clusters each have local top winners, yet the same set of network-builders repeat across campaigns.
+- **Intra-cluster early fraction**: the first 10 engagers are disproportionately from the same cluster compared to a shuffled baseline.
+- **Permanent-edge uplift**: after a mutual-reply occurs, the target engages with the author far more often than before.
+- **Early, concentrated bursts**: posts that get a small, fast, tightly-clustered burst of activity inside the first 10–30 minutes.
+- **Deep-engagement correlation**: thread expansions / link clicks / profile views predict final YAPs more strongly than raw like counts.
+- **Tiered winners across clusters**: many different clusters each have local top winners, yet the same set of network-builders repeat across campaigns.
 
-    # The Precision Model: Mathematical Formalization
+# The Precision Model: Mathematical Formalization
 
-    ## 1. Notation and Core Variables
+## 1. Notation and Core Variables
 
-    ### 1.1 Global Platform Parameters
+### 1.1 Global Platform Parameters
 
-    - $B_{\text{global}} = 1000$ : total platform YAPs distributed per hour
-    - $U$ : set of all active users on platform
-    - $P$ : set of active projects (campaigns)
-    - $C$ : set of Twitter's 145,000 community clusters
+- $B_{\text{global}} = 1000$ : total platform YAPs distributed per hour
+- $U$ : set of all active users on platform
+- $P$ : set of active projects (campaigns)
+- $C$ : set of Twitter's 145,000 community clusters
 
-    ### 1.2 User-Specific Variables
+### 1.2 User-Specific Variables
 
-    - $u \in U$ : individual user
-    - $\text{cluster}(u) \in C$ : user's primary Twitter community cluster
-    - $\mathrm{rep}(u)$ : reputation weight of user $u$
-    - $sf(u)$ : smart followers count (cluster-validated)
-    - $ic(u) \in \{0, 1\}$ : inner circle status indicator
-    - $\mathrm{YapPrior}_u$ : user's accumulated YAP score
+- $u \in U$ : individual user
+- $\text{cluster}(u) \in C$ : user's primary Twitter community cluster
+- $\mathrm{rep}(u)$ : reputation weight of user $u$
+- $sf(u)$ : smart followers count (cluster-validated)
+- $ic(u) \in \{0, 1\}$ : inner circle status indicator
+- $\mathrm{YapPrior}_u$ : user's accumulated YAP score
 
-    ### 1.3 Content and Engagement Variables
+### 1.3 Content and Engagement Variables
 
-    - $i$ : individual post/content
-    - $E_i$ : set of engagements on post $i$ within monitoring window
-    - $e \in E_i$ : individual engagement (like, reply, retweet, quote)
-    - $u_e$ : user who created engagement $e$
-    - $\mathrm{type}(e) \in \{\text{like}, \text{reply}, \text{retweet}, \text{quote}\}$
+- $i$ : individual post/content
+- $E_i$ : set of engagements on post $i$ within monitoring window
+- $e \in E_i$ : individual engagement (like, reply, retweet, quote)
+- $u_e$ : user who created engagement $e$
+- $\mathrm{type}(e) \in \{\text{like}, \text{reply}, \text{retweet}, \text{quote}\}$
 
-    ### 1.4 X-Enhanced Deep Engagement Metrics
+### 1.4 X-Enhanced Deep Engagement Metrics
 
-    - $\mathrm{Dwell}_i$ : average dwell time on post $i$ (seconds)
-    - $\mathrm{ProfileClicks}_i$ : profile clicks generated by post $i$
-    - $\mathrm{ShowMore}_i$ : thread expansion clicks on post $i$
-    - $\mathrm{PEdge}(u, v) \in \{0, 1\}$ : permanent edge indicator between users
+- $\mathrm{Dwell}_i$ : average dwell time on post $i$ (seconds)
+- $\mathrm{ProfileClicks}_i$ : profile clicks generated by post $i$
+- $\mathrm{ShowMore}_i$ : thread expansion clicks on post $i$
+- $\mathrm{PEdge}(u, v) \in \{0, 1\}$ : permanent edge indicator between users
 
-    ### 1.5 Content Quality Variables
+### 1.5 Content Quality Variables
 
-    - $\mathrm{insight}_i$ : content quality score (0-1)
-    - $\mathrm{farmProb}_i$ : predicted farming probability (0-1)
-    - $t_i$ : minutes since post creation at evaluation time
-    - $\tau$ : time decay constant
+- $\mathrm{insight}_i$ : content quality score (0-1)
+- $\mathrm{farmProb}_i$ : predicted farming probability (0-1)
+- $t_i$ : minutes since post creation at evaluation time
+- $\tau$ : time decay constant
 
-    ## 2. Reputation Weight Function
+## 2. Reputation Weight Function
 
-    The reputation weight combines traditional metrics with X-enhanced community intelligence:
+The reputation weight combines traditional metrics with X-enhanced community intelligence:
 
-    $$rep(u) = \log(1 + sf(u)) \cdot (1 + \alpha_{ic} \cdot ic(u)) \cdot (1 + \alpha_{cluster} \cdot ClusterInfluence(u))$$
+$$rep(u) = \log(1 + sf(u)) \cdot (1 + \alpha_{ic} \cdot ic(u)) \cdot (1 + \alpha_{cluster} \cdot ClusterInfluence(u))$$
 
-    **Where:**
+**Where:**
 
-    - $sf(u)$ is cluster-validated smart followers (not raw follower count)
-    - $\alpha_{ic} \in [0.2, 0.6]$ is inner circle boost parameter
-    - $\mathrm{ClusterInfluence}(u)$ measures influence within user's specific community cluster
+- $sf(u)$ is cluster-validated smart followers (not raw follower count)
+- $\alpha_{ic} \in [0.2, 0.6]$ is inner circle boost parameter
+- $\mathrm{ClusterInfluence}(u)$ measures influence within user's specific community cluster
 
-    ### 2.1 Cluster Influence Calculation
+### 2.1 Cluster Influence Calculation
 
-    $$ClusterInfluence(u) = \frac{\sum_{v \in cluster(u)} PEdge(u, v) \cdot rep(v)}{\sum_{v \in cluster(u)} rep(v)}$$
+$$ClusterInfluence(u) = \frac{\sum_{v \in cluster(u)} PEdge(u, v) \cdot rep(v)}{\sum_{v \in cluster(u)} rep(v)}$$
 
-    *This measures the user's permanent connection strength within their community cluster.*
+*This measures the user's permanent connection strength within their community cluster.*
 
-    ## 3. Community Match Function
+## 3. Community Match Function
 
-    The community match function weights engagements based on cluster alignment:
+The community match function weights engagements based on cluster alignment:
 
-    $$CM(u_e, author_i) = \begin{cases}1 + \beta_{same} & \text{if } cluster(u_e) = cluster(author_i) \\1 + \beta_{adjacent} & \text{if } cluster(u_e) \in Adjacent(cluster(author_i)) \\1 & \text{otherwise}\end{cases}$$
+$$CM(u_e, author_i) = \begin{cases}1 + \beta_{same} & \text{if } cluster(u_e) = cluster(author_i) \\1 + \beta_{adjacent} & \text{if } cluster(u_e) \in Adjacent(cluster(author_i)) \\1 & \text{otherwise}\end{cases}$$
 
-    **Where:**
+**Where:**
 
-    - $\beta_{\text{same}} \in [0.3, 0.8]$ boosts same-cluster engagement
-    - $\beta_{\text{adjacent}} \in [0.1, 0.3]$ provides smaller boost for adjacent clusters
-    - $\mathrm{Adjacent}(c)$ returns clusters with high user overlap with cluster $c$
+- $\beta_{\text{same}} \in [0.3, 0.8]$ boosts same-cluster engagement
+- $\beta_{\text{adjacent}} \in [0.1, 0.3]$ provides smaller boost for adjacent clusters
+- $\mathrm{Adjacent}(c)$ returns clusters with high user overlap with cluster $c$
 
-    ## 4. Engagement Type Weights
+## 4. Engagement Type Weights
 
-    Based on Twitter's algorithm weights, modified for crypto content:
+Based on Twitter's algorithm weights, modified for crypto content:
 
-    $$w_{type(e)} = \begin{cases}1.0 & \text{if } type(e) = reply \\0.7 & \text{if } type(e) = quote \\0.4 & \text{if } type(e) = retweet \\0.2 & \text{if } type(e) = like\end{cases}$$
+$$w_{type(e)} = \begin{cases}1.0 & \text{if } type(e) = reply \\0.7 & \text{if } type(e) = quote \\0.4 & \text{if } type(e) = retweet \\0.2 & \text{if } type(e) = like\end{cases}$$
 
-    ## 5. Unified Influence Score Formula
+## 5. Unified Influence Score Formula
 
-    The core scoring function integrates all X-enhanced factors:
+The core scoring function integrates all X-enhanced factors:
 
-    $$s_i = \left( \sum_{e \in E_i} w_{type(e)} \cdot rep(u_e) \cdot CM(u_e, author_i) \cdot (1 + \mu \cdot PEdge(u_e, author_i)) \right)^a\times (1 + insight_i)\times \exp(-t_i / \tau)\times (1 - farmProb_i)^\gamma\times (1 + \beta \cdot YapPrior_{author_i})\times (1 + \eta \cdot Dwell_i + \kappa \cdot ProfileClicks_i + \lambda \cdot ShowMore_i)$$
+$$s_i = \left( \sum_{e \in E_i} w_{type(e)} \cdot rep(u_e) \cdot CM(u_e, author_i) \cdot (1 + \mu \cdot PEdge(u_e, author_i)) \right)^a\times (1 + insight_i)\times \exp(-t_i / \tau)\times (1 - farmProb_i)^\gamma\times (1 + \beta \cdot YapPrior_{author_i})\times (1 + \eta \cdot Dwell_i + \kappa \cdot ProfileClicks_i + \lambda \cdot ShowMore_i)$$
 
-    **Parameter Definitions:**
+**Parameter Definitions:**
 
-    - $a \in [0.8, 1.2]$ : engagement exponent (controls concavity)
-    - $\mu \in [0.5, 2.0]$ : permanent edge boost multiplier
-    - $\beta \in [0.3, 0.7]$ : YAP prior influence factor
-    - $\gamma \in [1.5, 3.0]$ : farming penalty exponent
-    - $\eta, \kappa, \lambda \in [0.1, 0.5]$ : deep engagement multipliers
-    - $\tau \in [30, 90]$ : time decay constant (minutes)
+- $a \in [0.8, 1.2]$ : engagement exponent (controls concavity)
+- $\mu \in [0.5, 2.0]$ : permanent edge boost multiplier
+- $\beta \in [0.3, 0.7]$ : YAP prior influence factor
+- $\gamma \in [1.5, 3.0]$ : farming penalty exponent
+- $\eta, \kappa, \lambda \in [0.1, 0.5]$ : deep engagement multipliers
+- $\tau \in [30, 90]$ : time decay constant (minutes)
 
-    ## 6. Project-Specific Budget Allocation
+## 6. Project-Specific Budget Allocation
 
-    ### 6.1 Hybrid Budget Split
+### 6.1 Hybrid Budget Split
 
-    $$B_P = \alpha \cdot B_{global} \cdot \frac{A_P^\theta}{\sum_{Q \in P} A_Q^\theta}$$
+$$B_P = \alpha \cdot B_{global} \cdot \frac{A_P^\theta}{\sum_{Q \in P} A_Q^\theta}$$
 
-    $$B_{global\_pool} = (1 - \alpha) \cdot B_{global}$$
+$$B_{global\_pool} = (1 - \alpha) \cdot B_{global}$$
 
-    **Where:**
+**Where:**
 
-    - $\alpha \in [0, 1]$ controls project-specific vs global allocation split
-    - $A_P$ is project $P$'s activity metric (volume of relevant content)
-    - $\theta \geq 1$ controls concentration (higher $\theta$ = more concentrated)
+- $\alpha \in [0, 1]$ controls project-specific vs global allocation split
+- $A_P$ is project $P$'s activity metric (volume of relevant content)
+- $\theta \geq 1$ controls concentration (higher $\theta$ = more concentrated)
 
-    ### 6.2 YAP Distribution Functions
+### 6.2 YAP Distribution Functions
 
-    **Project-specific allocation:**
+**Project-specific allocation:**
 
-    $$yaps_i^{(P)} = B_P \cdot \frac{s_i}{\sum_{j \in Posts_P} s_j}$$
+$$yaps_i^{(P)} = B_P \cdot \frac{s_i}{\sum_{j \in Posts_P} s_j}$$
 
-    **Global pool allocation:**
+**Global pool allocation:**
 
-    $$yaps_i^{(G)} = B_{global\_pool} \cdot \frac{s_i}{\sum_{j \in AllPosts} s_j}$$
+$$yaps_i^{(G)} = B_{global\_pool} \cdot \frac{s_i}{\sum_{j \in AllPosts} s_j}$$
 
-    **Total YAPs awarded:**
+**Total YAPs awarded:**
 
-    $$yaps_i = yaps_i^{(P)} + yaps_i^{(G)}$$
+$$yaps_i = yaps_i^{(P)} + yaps_i^{(G)}$$
 
-    ## 7. Strategic Early Signal Coordination
+## 7. Strategic Early Signal Coordination
 
-    ### 7.1 Optimal Timing Function
+### 7.1 Optimal Timing Function
 
-    $$T_{Optimal}(i, cluster) = \arg\max_t \left( \sum_{u \in cluster} OnlineProbability(u, t) \cdot rep(u) \right)$$
+$$T_{Optimal}(i, cluster) = \arg\max_t \left( \sum_{u \in cluster} OnlineProbability(u, t) \cdot rep(u) \right)$$
 
-    > *This identifies the optimal posting time to maximize early engagement from high-reputation users in the same cluster.*
+> *This identifies the optimal posting time to maximize early engagement from high-reputation users in the same cluster.*
 
-    ### 7.2 Cascade Activation Function
+### 7.2 Cascade Activation Function
 
-    $$CascadeValue(i, t) = \sum_{c \in AdjacentClusters} \sum_{u \in c} P(Engage_{u,i} | EarlySignals_{i}) \cdot rep(u)$$
+$$CascadeValue(i, t) = \sum_{c \in AdjacentClusters} \sum_{u \in c} P(Engage_{u,i} | EarlySignals_{i}) \cdot rep(u)$$
 
-    > *This calculates the expected cascade value based on early engagement signals.*
+> *This calculates the expected cascade value based on early engagement signals.*
 
-    ## 8. Leaderboard and Token Conversion
+## 8. Leaderboard and Token Conversion
 
-    ### 8.1 Cumulative YAP Points
+### 8.1 Cumulative YAP Points
 
-    $$YapPoints_u^P = \sum_{t \in [T_0, T_1]} \sum_{i \in Posts_u^P(t)} yaps_i$$
+$$YapPoints_u^P = \sum_{t \in [T_0, T_1]} \sum_{i \in Posts_u^P(t)} yaps_i$$
 
-    ### 8.2 Token Allocation Models
+### 8.2 Token Allocation Models
 
-    **Proportional Model:**
+**Proportional Model:**
 
-    $$tokens_u^P = R_P^{total} \cdot \frac{YapPoints_u^P}{\sum_{v \in Participants_P} YapPoints_v^P}$$
+$$tokens_u^P = R_P^{total} \cdot \frac{YapPoints_u^P}{\sum_{v \in Participants_P} YapPoints_v^P}$$
 
-    **Tiered Pyramid Model:**
+**Tiered Pyramid Model:**
 
-    $$tokens_u^P = \begin{cases} R_P^{total} \cdot 0.6 & \text{if } Rank(u) \leq 0.01 \cdot |Participants_P| \\ R_P^{total} \cdot 0.3 & \text{if } 0.01 < Rank(u) \leq 0.1 \cdot |Participants_P| \\ R_P^{total} \cdot 0.1 & \text{if } 0.1 < Rank(u) \leq 1.0 \cdot |Participants_P| \\ 0 & \text{otherwise} \end{cases}$$
+$$tokens_u^P = \begin{cases} R_P^{total} \cdot 0.6 & \text{if } Rank(u) \leq 0.01 \cdot |Participants_P| \\ R_P^{total} \cdot 0.3 & \text{if } 0.01 < Rank(u) \leq 0.1 \cdot |Participants_P| \\ R_P^{total} \cdot 0.1 & \text{if } 0.1 < Rank(u) \leq 1.0 \cdot |Participants_P| \\ 0 & \text{otherwise} \end{cases}$$
 
-    ## 9. Behavioral Engineering Parameters
+## 9. Behavioral Engineering Parameters
 
-    ### 9.1 Addiction Optimization Function
+### 9.1 Addiction Optimization Function
 
-    Where $\rho > 1$ creates superlinear rewards for exceeding expectations, and $\mathrm{VariabilityBonus}_i$ implements intermittent reinforcement.
+Where $\rho > 1$ creates superlinear rewards for exceeding expectations, and $\mathrm{VariabilityBonus}_i$ implements intermittent reinforcement.
 
-    $$AddictionScore_u = \sum_{t=1}^T \left(\frac{yaps_{u,t}}{expected_{u,t}}\right)^\rho \cdot VariabilityBonus_t$$
+$$AddictionScore_u = \sum_{t=1}^T \left(\frac{yaps_{u,t}}{expected_{u,t}}\right)^\rho \cdot VariabilityBonus_t$$
 
-    ### 9.2 Sunk Cost Amplification
+### 9.2 Sunk Cost Amplification
 
-    $$SunkCostPressure_u = \log(1 + HoursInvested_u) \cdot \frac{TotalYaps_u}{AverageYaps_{peers}}$$
+$$SunkCostPressure_u = \log(1 + HoursInvested_u) \cdot \frac{TotalYaps_u}{AverageYaps_{peers}}$$
 
-    > *This increases user retention by making leaving more psychologically costly as investment increases.*
+> *This increases user retention by making leaving more psychologically costly as investment increases.*
 
-    ## 10. Model Validation Metrics
+## 10. Model Validation Metrics
 
-    ### 10.1 Predictive Accuracy
+### 10.1 Predictive Accuracy
 
-    $$Accuracy = \frac{|\{u: predicted\_rank(u) \approx actual\_rank(u)\}|}{|U|}$$
+$$Accuracy = \frac{|\{u: predicted\_rank(u) \approx actual\_rank(u)\}|}{|U|}$$
 
-    ### 10.2 Engagement Quality Index
+### 10.2 Engagement Quality Index
 
-    $$EQI = \frac{\sum_i s_i \cdot QualityScore_i}{\sum_i s_i}$$
+$$EQI = \frac{\sum_i s_i \cdot QualityScore_i}{\sum_i s_i}$$
 
-    ### 10.3 Network Effect Measurement
+### 10.3 Network Effect Measurement
 
-    $$NetworkEffect = \frac{\sum_{(u,v)} PEdge(u,v) \cdot rep(u) \cdot rep(v)}{|U|^2}$$
+$$NetworkEffect = \frac{\sum_{(u,v)} PEdge(u,v) \cdot rep(u) \cdot rep(v)}{|U|^2}$$
 
-    ## 11. Implementation Complexity Analysis
+## 11. Implementation Complexity Analysis
 
-    ### 11.1 Computational Requirements
+### 11.1 Computational Requirements
 
-    **Real-time scoring:** $O(|E| \log |U|)$ per hour
+**Real-time scoring:** $O(|E| \log |U|)$ per hour
 
-    **Community mapping:** $O(|U|^2)$ weekly update
+**Community mapping:** $O(|U|^2)$ weekly update
 
-    **Cascade prediction:** $O(|U| \cdot |C|)$ per post
+**Cascade prediction:** $O(|U| \cdot |C|)$ per post
 
-    ### Parameter Recommendation Table
+### Parameter Recommendation Table
 
-    | Parameter | Symbol | Suggested Range | Purpose |
-    |-----------|---------|-----------------|---------|
-    | Inner circle boost | $\alpha_{ic}$ | 0.2 - 0.6 | Advantage established accounts |
-    | Community match | $\beta_{\text{same}}$ | 0.3 - 0.8 | Reward cluster alignment |
-    | Engagement exponent | $a$ | 0.8 - 1.2 | Control engagement curve |
-    | Time decay | $\tau$ | 30 - 90 min | First-hour advantage |
-    | Farm penalty | $\gamma$ | 1.5 - 3.0 | Anti-manipulation |
-    | Project concentration | $\alpha$ | 0.7 - 0.9 | Project-specific vs global |
+| Parameter | Symbol | Suggested Range | Purpose |
+|-----------|---------|-----------------|---------|
+| Inner circle boost | $\alpha_{ic}$ | 0.2 - 0.6 | Advantage established accounts |
+| Community match | $\beta_{\text{same}}$ | 0.3 - 0.8 | Reward cluster alignment |
+| Engagement exponent | $a$ | 0.8 - 1.2 | Control engagement curve |
+| Time decay | $\tau$ | 30 - 90 min | First-hour advantage |
+| Farm penalty | $\gamma$ | 1.5 - 3.0 | Anti-manipulation |
+| Project concentration | $\alpha$ | 0.7 - 0.9 | Project-specific vs global |
 
 > *This framework provides the mathematical foundation for understanding and potentially reverse-engineering Kaito's actual implementation.*
 

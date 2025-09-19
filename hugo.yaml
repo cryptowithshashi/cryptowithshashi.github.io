@@ -209,7 +209,7 @@ params:
   darkmode: false
 
   # Math rendering
-  math: mathjax
+  math: "katex"
 
   # Site Information Settings
   author: Shashi
